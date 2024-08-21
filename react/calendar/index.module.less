@@ -1,0 +1,98 @@
+.contributionChart {
+    width: 100%;
+    padding: 20px;
+    
+    .content {
+      table {
+        border-spacing: 3px;
+        width: 100%;
+        white-space: nowrap;
+      }
+      th,
+      td {
+        box-sizing: border-box;
+        background-color: transparent;
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        line-height: 1;
+        padding: 0;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      th {
+        text-align: left;
+        color: #333;
+        font-weight: 400;
+        padding-bottom: 6px;
+      }
+      tr {
+        font-weight: 300;
+        height: 10px;
+      }
+      #first-block {
+        width: 28px;
+      }
+      .block {
+        border-radius: 2px;
+        background-color: #efefef;
+        &.hidden {
+          background-color: transparent !important;
+        }
+      }
+      .label {
+        position: relative;
+      }
+      .tbody {
+        .label span {
+          position: absolute;
+          top: 50%;
+          transform: translate(0%, -50%);
+        }
+      }
+    }
+  
+    .tfoot {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #333;
+      font-size: 12px;
+      color: #999;
+      .description{
+        padding-left: 30px;
+      }
+      .colors {
+        display: flex;
+        padding-right: 30px;
+        align-items: center;
+        .colorItem {
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+        }
+        .colorItem {
+          margin-left: 4px;
+        }
+        .moreText {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+@media (max-width:550px) {
+  .contributionChart {
+    .content {
+      thead {
+        display: none;
+      }
+      .tbody {
+        .label {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
